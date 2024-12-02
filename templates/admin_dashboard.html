@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Administrador</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .btn-back {
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, Administrador</h1>
+        <p>
+            <a href="{{ url_for('manage_users') }}">Gestionar Usuarios</a> | 
+            <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+        </p>
+        <p class="btn-back">
+            <a href="{{ url_for('admin_dashboard') }}" class="btn btn-back">Volver Atrás</a>
+        </p>
+    </div>
+</body>
+</html>

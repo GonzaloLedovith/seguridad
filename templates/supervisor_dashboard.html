@@ -1,0 +1,82 @@
+{% block content %}
+  <div class="container">
+    <h2>Bienvenido, Supervisor</h2>
+    <p>Este es tu panel de control, donde puedes:</p>
+    <ul>
+      <li><a href="{{ url_for('view_users') }}">Ver lista de usuarios</a></li>
+      <li><a href="{{ url_for('view_all_contacts') }}">Ver lista de contactos</a></li>
+      <li><a href="{{ url_for('logout') }}">Cerrar sesión</a></li> <!-- Opción de cerrar sesión -->
+    </ul>
+  </div>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #4CAF50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    ul li a {
+      display: inline-block;
+      color: #fff;
+      background-color: #4CAF50;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    ul li a:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+    }
+
+    ul li a:active {
+      transform: translateY(0);
+    }
+
+    /* Mejorar la accesibilidad y la visibilidad del enlace */
+    ul li a:focus {
+      outline: 2px solid #45a049;
+      outline-offset: 4px;
+    }
+  </style>
+{% endblock %}

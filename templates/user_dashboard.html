@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Usuario</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .logout {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, Usuario</h1>
+        <p>
+            <a href="{{ url_for('add_contact') }}">Agregar Contacto</a> | 
+            <a href="{{ url_for('view_contacts') }}">Ver Contactos</a> | 
+            <a href="{{ url_for('search_contacts') }}">Buscar Contactos</a>
+        </p>
+        <p class="logout">
+            <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+        </p>
+    </div>
+</body>
+</html>
